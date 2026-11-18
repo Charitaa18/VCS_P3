@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+a { color: #000; text-decoration: underline; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+
+header {
+  border-bottom: 1px solid #000;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+.bar {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.site-title { font-weight: 700; text-decoration: none; }
+
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
+nav a { text-decoration: none; }
+nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+
+main { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 1.4rem; margin: 48px 0 12px; padding-top: 12px; border-top: 1px solid #000; }
+h3 { font-size: 1.1rem; margin: 0 0 4px; }
+
+.meta { margin: 0 0 32px; }
+
+.contents { border: 1px solid #000; padding: 16px 20px; margin: 24px 0 8px; }
+.contents p { margin: 0 0 8px; font-weight: 700; }
+.contents ol { margin: 0; padding-left: 20px; }
+.contents ol ol { margin: 4px 0 8px; }
+
+.response { border: 1px solid #000; padding: 20px; margin: 20px 0; scroll-margin-top: 80px; }
+.response .tag { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 12px; }
+
+dl { margin: 12px 0 0; }
+dt { font-weight: 700; margin-top: 12px; }
+dd { margin: 2px 0 0; }
+
+blockquote { margin: 12px 0 0; padding-left: 16px; border-left: 3px solid #000; }
+
+.cite { font-size: 0.9rem; word-break: break-word; }
+
+.top { font-size: 0.9rem; }
+
+footer { border-top: 1px solid #000; }
+footer .bar { font-size: 0.9rem; }
+
+@media (max-width: 520px) {
+  body { font-size: 17px; }
+  h1 { font-size: 1.6rem; }
+  .bar { flex-direction: column; }
+  header { position: static; }
+  .response { scroll-margin-top: 16px; }
+}
